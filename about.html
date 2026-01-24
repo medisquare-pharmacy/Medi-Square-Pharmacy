@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Medi-Square Pharmacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Light gray background to make the black/red pop */
+        }
+
+        .image-frame {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 2px solid #ef4444; /* Added red border to frames */
+        }
+
+            .image-frame img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+    </style>
+</head>
+<body id="top">
+    <header class="bg-[#0a0a0a] sticky top-0 z-50 shadow-2xl border-b-2 border-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#top" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition">
+                <div class="rounded-lg overflow-hidden bg-white p-1">
+                    <img src="images/logo1.png" alt="Medi-Square Logo" class="h-10 sm:h-12 w-auto object-contain">
+                </div>
+                <span class="text-lg sm:text-2xl font-black text-white tracking-tighter uppercase">
+                    <span class="text-red-600">MEDI-SQUARE</span> PHARMACY
+                </span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 font-bold text-white">
+                <a href="index.html" class="hover:text-red-500 transition">Home</a>
+                <a href="about.html" class="text-red-600 border-b-2 border-red-600">About</a>
+                <a href="services.html" class="hover:text-red-500 transition">Our Team</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-red-900">
+            <nav class="flex flex-col font-bold text-white">
+                <a href="index.html" class="px-6 py-4 hover:bg-red-900 border-b border-white/5">Home</a>
+                <a href="about.html" class="px-6 py-4 bg-red-900 text-red-500 border-b border-white/5">About</a>
+                <a href="services.html" class="px-6 py-4 hover:bg-red-900">Services</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-12 sm:py-20 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="bg-white p-8 sm:p-16 rounded-[2rem] sm:rounded-[3rem] shadow-xl border-t-8 border-red-600 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-0"></div>
+            <div class="relative z-10">
+                <h1 class="text-3xl sm:text-5xl font-black text-slate-900 mb-8 uppercase tracking-tighter">
+                    About <span class="text-red-600">Medi-Square</span> Pharmacy
+                </h1>
+
+                <div class="text-base sm:text-lg text-slate-600 leading-relaxed space-y-6 mb-12">
+                    <p>
+                        At <span class="font-bold text-black">Medi-Square Pharmacy</span>, we believe that health is the cornerstone of a vibrant life. Located in the heart of Moreleta Square, we have dedicated ourselves to providing the Pretoria community with more than just prescriptions, we provide a partnership in wellness.
+                    </p>
+
+                    <div class="bg-black text-white p-6 rounded-2xl border-l-4 border-red-600 italic font-medium">
+                        "We Like Making You Feel Better. Get Well Soon!"
+                    </div>
+
+                    <p>
+                        Our mission is to combine professional pharmaceutical expertise with a personal, community centered touch. Whether you are managing a chronic condition or seeking advice for a minor ailment, our team is here to ensure you receive care that is both clinically accurate and deeply compassionate.
+                    </p>
+                </div>
+
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed space-y-6 relative z-10 mb-12">
+                    Medi-Square Pharmacy is committed to providing exceptional healthcare solutions tailored to your needs.
+                    Our team focuses on clinical accuracy, patient convenience, and compassionate care.
+                    We offer a wide range of medications and professional clinical services in the heart of Moreleta Pretoria.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-red-600">
+                        <h3 class="font-black text-black uppercase mb-2">Expertise You Can Trust</h3>
+                        <p class="text-sm text-slate-500">Our team consists of a qualified Pharmacist and Pharmacist assistants professionals dedicated to the highest standards of health care, and they will take good care of you</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border-l-4 border-red-600">
+                        <h3 class="font-black text-black uppercase mb-2">Personalized Care</h3>
+                        <p class="text-sm text-slate-500">We treat every patient as a neighbor, not a number, ensuring your specific health needs are met with vibrant energy.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
+                    <div class="group shadow-lg rounded-2xl overflow-hidden hover:shadow-red-200 transition">
+                        <div class="image-frame">
+                            <img src="images/poi.jpg" alt="Pharmacy Interior" class="group-hover:scale-110 transition duration-500">
+                        </div>
+                    </div>
+                    <div class="group shadow-lg rounded-2xl overflow-hidden hover:shadow-red-200 transition">
+                        <div class="image-frame">
+                            <img src="images/poiu.jpg" alt="Pharmacist at work" class="group-hover:scale-110 transition duration-500">
+                        </div>
+                    </div>
+                    <div class="group shadow-lg rounded-2xl overflow-hidden hover:shadow-red-200 transition">
+                        <div class="image-frame">
+                            <img src="images/poi2.jpg" alt="Store Front" class="group-hover:scale-110 transition duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="rounded-lg overflow-hidden bg-white p-1 border border-red-600">
+                                
+                            </div>
+                            
+                        </div>
+                    <p class="text-sm leading-relaxed">Providing professional healthcare and pharmaceutical expertise to the Moreleta Pretoria community for years.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Navigation</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-cyan-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-cyan-400 transition">Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-cyan-500 mt-1 mr-3"></i>
+                            <span>Shop 05 Moreleta Square, Garsfontein Rd,<br>Moreleta Park<br>Pretoria, South Africa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-cyan-500 mr-3"></i>
+                            <span>012 998 0601 / 012 337 7794</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Trading Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between"><span>Mon - Fri:</span> <span class="text-white font-semibold">8am - 6:30pm</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-semibold">8am - 4pm</span></li>
+                        <li class="flex justify-between"><span class="text-red-400">Sunday:</span> <span class="text-red-400 font-bold uppercase text-[10px] mt-1">Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] uppercase tracking-widest opacity-40">
+                    &copy; 2026 Medi-Square Pharmacy | TSLV SEBOLA
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            } else {
+                menuIcon.classList.replace('fa-bars', 'fa-times');
+            }
+        });
+    </script>
+</body>
+</html>

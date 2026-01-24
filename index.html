@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Square Pharmacy | Professional Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --pharmacy-primary: #0891b2;
+            --pharmacy-dark: #164e63;
+            --pharmacy-light: #ecfeff;
+            --pharmacy-accent: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        /* Forces images to fill the area without distortion */
+        .fit-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Frame for partner logos to keep them consistent */
+        .partner-logo-frame {
+            height: 3rem; /* Same as h-12 in Tailwind */
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .partner-logo-frame img {
+                max-height: 100%;
+                max-width: 150px;
+                object-fit: contain; /* Logos should not be cropped, so we use contain */
+            }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            display: flex;
+            width: 200%;
+            animation: scroll 25s linear infinite;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <header class="bg-[#0a0a0a] sticky top-0 z-50 shadow-2xl border-b-2 border-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#top" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition">
+                <div class="rounded-lg overflow-hidden bg-white p-1">
+                    <img src="images/logo1.png" alt="Medi-Square Logo" class="h-10 sm:h-12 w-auto object-contain">
+                </div>
+                <span class="text-lg sm:text-2xl font-black text-white tracking-tighter uppercase">
+                    <span class="text-red-600">MEDI-SQUARE</span> PHARMACY
+                </span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 font-bold text-white">
+                <a href="index.html" class="hover:text-red-600 transition">Home</a>
+                <a href="about.html" class="hover:text-red-600 transition">About</a>
+                <a href="services.html" class="hover:text-red-600 transition">Our Team</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-red-900 shadow-2xl">
+            <nav class="flex flex-col font-bold text-white">
+                <a href="index.html" class="px-6 py-4 hover:bg-red-900 border-b border-white/5 transition">Home</a>
+                <a href="about.html" class="px-6 py-4 hover:bg-red-900 border-b border-white/5 transition">About</a>
+                <a href="services.html" class="px-6 py-4 hover:bg-red-900 transition">Our Team</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            } else {
+                menuIcon.classList.replace('fa-bars', 'fa-times');
+            }
+        });
+    </script>
+
+    <section class="relative min-h-[500px] sm:min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden bg-black">
+
+        <div id="hero-carousel" class="absolute inset-0 z-0 bg-black">
+            <img src="images/pi.jpg" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-100" alt="Pharmacy Interior">
+
+            <img src="images/p3.jpg" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-0" alt="Medical Supplies">
+
+            <img src="images/PK.jpg" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-0" alt="Pharmacist Consultation">
+
+            <img src="images/PM.jpg" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-0" alt="Pharmacy Counter">
+
+            <img src="images/pi5.jpg" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-0" alt="Healthcare Products">
+        </div>
+
+        <div class="relative z-10 max-w-4xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            <span class="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block border border-white/20">Trusted Community Pharmacy</span>
+
+            <h1 class="text-4xl sm:text-7xl font-extrabold text-white mb-6 tracking-tight uppercase">
+                Your Health, <br><span class="text-red-600">Our Priority.</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-white mb-10 max-w-2xl mx-auto font-bold leading-relaxed">
+                "We Like Making You Feel Better. Get Well Soon!"
+            </p>
+
+            <div class="mb-8 flex justify-center items-center gap-4 bg-black/40 backdrop-blur-md py-3 px-6 rounded-2xl border border-red-600/50 w-fit mx-auto animate-pulse">
+                <i class="fas fa-motorcycle text-red-600 text-4xl sm:text-5xl"></i>
+                <div class="text-left">
+                    <span class="block text-white font-black text-xl sm:text-2xl uppercase tracking-tighter">Free Fast Home Delivery</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:0129980601" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition">Emergency Call</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('#hero-carousel img');
+            let currentIndex = 0;
+
+            function nextImage() {
+                // Hide current image (Fully transparent)
+                images[currentIndex].classList.replace('opacity-100', 'opacity-0');
+
+                // Increment index
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Show next image (Fully visible/no shade)
+                images[currentIndex].classList.replace('opacity-0', 'opacity-100');
+            }
+
+            setInterval(nextImage, 5000);
+        });
+    </script>
+    <section class="py-16 px-4 bg-[#f1f5f9]">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden border-b-[12px] border-red-600 flex flex-col lg:flex-row">
+
+                <div class="lg:w-2/5 bg-black/40 p-12 sm:p-16 flex flex-col justify-center text-center lg:text-left">
+                    
+                    <h2 class="text-4xl font-black text-white uppercase tracking-tighter leading-none mb-6">
+                        Welcome to <br><span class="text-red-600">Medi-Square Pharmacy</span>
+                    </h2>
+                    <div class="h-1.5 w-24 bg-red-600 mx-auto lg:mx-0 mb-8"></div>
+                    <p class="text-black-400 text-lg font-medium italic">
+                        "We Like Making You Feel Better. Get Well Soon!"
+                    </p>
+
+                    <div class="mt-8 flex items-center justify-center lg:justify-start text-white gap-3">
+                        <i class="fas fa-motorcycle text-red-600 text-2xl"></i>
+                        <span class="font-bold uppercase tracking-widest text-sm">We Deliver to Your Door</span>
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5 p-10 sm:p-16 lg:p-20">
+                    <p class="text-red-600 font-bold uppercase tracking-widest text-sm mb-4">Trusted Community Pharmacy</p>
+                    <h3 class="text-3xl sm:text-5xl font-black text-slate-900 mb-8 leading-tight">
+                        Expert Pharmaceutical Care in <span class="text-red-600">Moreleta Park</span>
+                    </h3>
+
+                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+                        <p>
+                            At Medi-Square Pharmacy, we believe that health is the cornerstone of a vibrant life. Located in Moreleta Park, we have dedicated ourselves to providing the community with professional healthcare and pharmaceutical expertise.
+                        </p>
+                        <p>
+                            Our facility is lead by our Senior Pharmacist, Johannamarie Beyers, who ensures medication safety, accuracy, and professional health advice for our entire community. Under her leadership, we focus on clinical precision and a personal partnership and friendship in wellness.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 flex flex-wrap gap-6">
+                        <a href="about.html" class="px-8 py-4 bg-black text-white text-lg font-bold rounded-2xl hover:bg-red-600 transition duration-300 shadow-lg">
+                            Get to know us
+                        </a>
+                        <a href="services.html" class="px-8 py-4 border-2 border-red-600 text-red-600 text-lg font-bold rounded-2xl hover:bg-red-600 hover:text-white transition duration-300 shadow-lg">
+                            Meet our Team
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('#hero-carousel img');
+            let currentIndex = 0;
+
+            function nextImage() {
+                // Hide current image
+                images[currentIndex].classList.replace('opacity-40', 'opacity-0');
+
+                // Increment index
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Show next image
+                images[currentIndex].classList.replace('opacity-0', 'opacity-40');
+            }
+
+            // Change image every 5 seconds
+            setInterval(nextImage, 5000);
+        });
+    </script>
+
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6 mb-10 text-center">
+            <p class="text-red-600 font-bold text-sm uppercase tracking-widest border-b-2 border-red-600 inline-block pb-1">Official Medical Providers</p>
+        </div>
+
+        <div class="overflow-hidden whitespace-nowrap relative py-4">
+            <div class="animate-scroll space-x-16 sm:space-x-32 items-center flex">
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/cipla.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/aspen.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/Adcock Ingram.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/Panado.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/cipla.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/aspen.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/Adcock Ingram.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+                <div class="partner-logo-frame h-20 min-w-[200px] flex items-center justify-center">
+                    <img src="images/Panado.png" class="h-full w-auto object-contain hover:scale-110 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 group">
+                        <div class="rounded-lg overflow-hidden bg-white p-1 border border-red-600">
+                            
+                        </div>
+
+                        
+                    </div>
+                    <p class="text-sm leading-relaxed">Providing professional healthcare and pharmaceutical expertise to the Moreleta Pretoria community for years.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Navigation</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-cyan-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-cyan-400 transition">Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-cyan-500 mt-1 mr-3"></i>
+                            <span>Shop 05 Moreleta Square, Garsfontein Rd,<br>Moreleta Park<br>Pretoria, South Africa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-cyan-500 mr-3"></i>
+                            <span>012 998 0601 / 012 337 7794</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest border-b border-cyan-800 pb-2 inline-block">Trading Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between"><span>Mon - Fri:</span> <span class="text-white font-semibold">8am - 6:30pm</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-semibold">8am - 4pm</span></li>
+                        <li class="flex justify-between"><span class="text-red-400">Sunday:</span> <span class="text-red-400 font-bold uppercase text-[10px] mt-1">Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] uppercase tracking-widest opacity-40">
+                    &copy; 2026 Medi-Square Pharmacy | TSLV SEBOLA
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
